@@ -1,0 +1,257 @@
+@import './variables.scss';
+
+@mixin colorBtn($color) {
+  background: $color;
+  &:hover {
+    color: #FFF;
+    &:before,
+    &:after {
+      background: $color;
+    }
+  }
+}
+
+@keyframes svg_rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(360deg);
+  }
+}
+@mixin rotateTime($time) {
+  -webkit-transform: svg_rotation(360deg);
+  animation: svg_rotation $time linear infinite;
+  -moz-animation: svg_rotation $time linear infinite;
+  -webkit-animation: svg_rotation $time linear infinite;
+  -o-animation: svg_rotation $time linear infinite;
+}
+.rotating_two {
+  @include rotateTime(2s)
+}
+.rotating_five {
+  @include rotateTime(5s)
+}
+
+.blue-btn {
+  @include colorBtn($blue)
+}
+
+.light-blue-btn {
+  @include colorBtn($light-blue)
+}
+
+.red-btn {
+  @include colorBtn($red)
+}
+
+.pink-btn {
+  @include colorBtn($pink)
+}
+
+.green-btn {
+  @include colorBtn($green)
+}
+
+.tiffany-btn {
+  @include colorBtn($tiffany)
+}
+
+.yellow-btn {
+  @include colorBtn($yellow)
+}
+.el-button {
+  border-radius: 2px;
+}
+.w64_h32 {
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  padding: 0;
+}
+.w48_h26 {
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 2px;
+}
+.w42_h22 {
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+// 审核/未审核
+.stu_unchecked {
+  background-color: rgba(93, 112, 146, 0.2);
+  border: solid 1px rgba(93, 112, 146, 0.5);
+  color:rgba(255, 255, 255, 0.55);
+  @extend .w48_h26
+}
+.stu_checked {
+  background-color: rgba(0, 159, 81, 0.2);
+  border: solid 1px #009f51;
+  color: #FFF;
+  @extend .w48_h26;
+}
+
+.stu_refused {
+  background-color: rgba(0, 159, 81, 0.2);
+  border: solid 1px $red;
+  color: #FFF;
+  @extend .w48_h26
+}
+
+.stu_passed {
+  border: none;
+  background-color: #009f51;
+  color: #FFF;
+  @extend .w48_h26;
+  line-height: 26px;
+}
+
+.cal_btn {
+  @extend .w64_h32;
+  background-color: #2f373d !important;
+  border: solid 1px rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  &:hover {
+    background-color: #2f373d !important;
+    border: solid 1px rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+  }
+}
+// 弹窗的确定按钮
+.cfm_btn {
+  @extend .w64_h32;
+  background-color: $red !important;
+  color: #FFF;
+  border: 0;
+  &:hover {
+    background-color: $red !important;
+  }
+}
+
+.pri_btn {
+  background-color: $red !important;
+  border: 1px solid $red !important;
+}
+.def_btn {
+  background: #FFF !important;
+  &:hover span {
+    color: #606266 !important;
+  }
+}
+
+.c_circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+.c_purple {
+  @extend .c_circle;
+  background: #b60ccc;
+}
+.c_red {
+  @extend .c_circle;
+  background: #f5222d;
+}
+.c_orange {
+  @extend .c_circle;
+  background: #EBA006;
+}
+.c_amber_intell {
+  @extend .c_circle;
+  background: #FA6900;
+}
+.c_green {
+  @extend .c_circle;
+  background: #9d8f00;
+}
+.c_green_intell {
+  @extend .c_circle;
+  background: #029444;
+}
+.c_unknow {
+  @extend .c_circle;
+  background: #9b9d9d;
+}
+.c_complete {
+  @extend .c_circle;
+  background: #0C6D3B;
+}
+
+.level_tag {
+  color: #FFF;
+  width: 36px;
+  height: 22px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  border-radius: 2px;
+  display: inline-block
+}
+.severe_level {
+  @extend .level_tag;
+  background-color: rgba(182, 12, 204, 0.2);
+  border: solid 1px #b60ccc;
+}
+.high_level {
+  @extend .level_tag;
+  background-color: rgba(194, 40, 39, 0.2);
+  border: solid 1px rgba(194, 40, 39, 0.5);
+}
+.middle_level {
+  @extend .level_tag;
+  background-color: rgba(250, 173, 20, 0.2);
+  border: solid 1px rgba(250, 173, 20, 0.5);
+}
+.low_level {
+  @extend .level_tag;
+  background-color: rgba(0, 159, 81, 0.2);
+  border: solid 1px #009f51;
+}
+.unkonow_level {
+  @extend .level_tag;
+	background-color: rgba(155, 157, 157, 0.45);
+	border: solid 1px #9b9d9d;
+}
+
+// 威胁分类、家族、组织
+.common_tag {
+  display: inline-block;
+  padding: 0 6px;
+  max-width: 130%;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 2px;
+  color: #FFF;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+.family_tag {
+  @extend .common_tag;
+  background-color: rgba(209, 162, 60, 0.2);
+  border: solid 1px rgba(209, 162, 60, 0.5);
+}
+.org_tag {
+  @extend .common_tag;
+  background-color: rgba(194, 40, 39, 0.2);
+  border: solid 1px rgba(194, 40, 39, 0.5);
+}
+.threat_tag {
+  @extend .common_tag;
+  background-color: rgba(63, 177, 246, 0.2);
+  border: solid 1px rgba(63, 177, 246, 0.5);
+}
+
+

@@ -1,0 +1,25 @@
+$blue:#62a8ea;
+$light-blue:#3A71A8;
+$red: #ff4d4f;
+$brightRed: #f42741;
+$pink: #E65D6E;
+$green: #009f51;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+
+//sidebar
+$menuBg:#304156;
+$subMenuBg:#1f2d3d;
+$menuHover:#E6F7FF;
+
+// 表格 表头(th) 背景色
+$TableThBgc: #343a40;
+$BgcColor: #222426;
+// 内容背景色
+$MsgBgc:#242a2e;
+// 内容背景色
+$BoxBgc: #25282c;
+@function PW($w) {
+  @return $w * 1px;
+}

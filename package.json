@@ -1,0 +1,38 @@
+{
+  "name": "spark-intelligence-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "errorhandler": "^1.5.1",
+    "file-stream-rotator": "^0.5.7",
+    "form-data": "^3.0.0",
+    "helmet": "^3.20.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-favicon": "^2.0.1",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.15",
+    "log4js": "^6.1.0",
+    "moment": "^2.24.0",
+    "nodemon": "^2.0.2",
+    "qs": "^6.9.1",
+    "vue-clipboard2": "^0.3.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  },
+  "scripts": {
+    "start": "node ./app.js",
+    "build": "npm install && cd web && npm install && npm rebuild node-sass && npm run build && cd ../ && rm -rf ./web",
+    "dev": "cross-env APP_ENV=development  nodemon --config nodemon.json",
+    "dev:prod": "cross-env APP_ENV=production nodemon --config nodemon.json"
+  },
+  "keywords": [],
+  "author": ""
+}
