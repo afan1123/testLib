@@ -7,7 +7,6 @@ import '@/styles/index.scss' // global css
 import App from './App'
 import router from './router'
 import store from './store'
-import './icons' // icon
 import './errorLog'// error log
 import directive from '@/directive' // 引入自定义指令文件
 import '@/prototype'

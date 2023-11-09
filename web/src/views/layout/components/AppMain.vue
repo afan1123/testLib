@@ -13,7 +13,7 @@ export default {
   name: 'AppMain',
   data() {
     return {
-      path_arr: ['home', 'defence', 'city', 'survey', 'apt_state', 'chatgpt']
+      path_arr: ['home']
     }
   }
 }
@@ -31,8 +31,7 @@ export default {
   padding: 0 110px;
 }
 .home_app_main {
-  min-height: calc(100vh - 60px);
-  background: #000;
+  min-height: calc(100vh);
   overflow: auto;
 }
 .fade-enter,

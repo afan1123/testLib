@@ -30,20 +30,10 @@ router.get('/config', async (ctx) => {
   }
 })
 
-/* -------获取用户信息进行验证等------- */
-const USER = require('./user')
-router.use('/user', USER.routes())
-
-/* -------搜索IP查询数据------- */
-const SEARCH = require('./search')
-router.use('/host', SEARCH.routes())
-
 /* -------用户中心接口------- */
 const Center = require('./center')
 router.use('/center', Center.routes())
 
-/* -------hash、url、emial、证书搜索------- */
-const TYPE = require('./type')
-router.use('/type', TYPE.routes())
+
 
 module.exports = router;

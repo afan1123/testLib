@@ -1,5 +1,5 @@
 /**
- * 点击全屏指令
+ * 示例：点击全屏指令
  */
 export default {
   bind(el, binding) {
